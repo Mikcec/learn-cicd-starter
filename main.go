@@ -67,7 +67,7 @@ func main() {
 	}))
 
 	router.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		f, err := staticFiles.Open("startic/index.html")
+		f, err := staticFiles.Open("static/index.html")
 		if err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
